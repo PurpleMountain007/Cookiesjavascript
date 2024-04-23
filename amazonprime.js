@@ -1,26 +1,3 @@
-function requestDesktopSite() {
-    // Check if the viewport meta tag exists
-    const metaViewport = document.querySelector('meta[name="viewport"]');
-    if (metaViewport) {
-        // Remove the viewport meta tag
-        metaViewport.remove();
-    }
-
-    // Set the user agent to desktop
-    const desktopUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36";
-    Object.defineProperty(navigator, 'userAgent', {
-        value: desktopUserAgent,
-        writable: false,
-        configurable: true
-    });
-
-    // Refresh the page to load the desktop version
-    location.reload();
-}
-
-// Call the function to request desktop site
-requestDesktopSite();
-
 const cookies = [
     {
         "domain": ".primevideo.com",
